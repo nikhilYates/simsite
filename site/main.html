@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <head>
+            <title class> simwav </title>
+            <link rel = "stylesheet" type = "text/css" href = "style.css" title = "style">
+            <script src="simwav.js"></script>
+
+        </head>
+
+
+            <video autoplay muted loop playsinline class="vid-background">
+                <source src="MYM.mp4" type="video/mp4">
+            </video>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                $('.vid-background').css({
+                    filter: "blur(" + (scroll/125) + "px)"
+                })
+            })
+        </script>
+        <div class="titleArea"></div>
+        <body class = "main">
+
+
+
+            <div id="navDiv" class="menuDiv">
+                <div class="workingSpace">
+                    <div class="navContent">
+                        <br>
+                        <br>
+
+                        <div class="linkDiv">
+                            <a href="#" class="navLink">discography</a>
+                        </div>
+                        <div class="linkDiv">
+                            <a href="#" class="navLink">videography</a>
+                        </div>
+                        <div class="linkDiv">
+                            <a href="#" class="navLink">next</a>
+                        </div>
+                        <div class="linkDiv">
+                            <a href="#" class="navLink">about</a>
+                        </div>
+                        <div class="linkDiv">
+                            <a href="#" class="navLink">connect</a>
+                        </div>
+                        <div class="linkDiv">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="topScollArea">
+
+                <div class="workingSpace">
+
+                    <div class = "headerArea">
+                        <h3 id="wavyMenu" class="wavy" onclick="openNav()">wavy</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="scrollArea">
+                <div class="workingSpace">
+                    <h2 class="heading">SIMAY
+                    </h2>
+                </div>
+            </div>
+            <div class="scrollArea">
+                <div class="workingSpace">
+                    <h2 class="heading">SIMAY
+                    </h2>
+                </div>
+            </div>
+
+        </body>
+    
+    
+ 
+    </html>

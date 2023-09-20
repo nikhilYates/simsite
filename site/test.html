@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Sliding Menu</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-container {
+            display: none;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            color: white;
+            transition: top 0.3s;
+        }
+
+        .menu-content {
+            padding: 20px;
+        }
+
+        button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<button id="openMenu">Open Menu</button>
+<div class="menu-container" id="menu">
+    <div class="menu-content">
+        <h1>Full-Screen Menu</h1>
+        <p>This is a full-screen sliding menu.</p>
+        <button id="closeMenu">Close Menu</button>
+    </div>
+</div>
+
+<script>
+    const openMenuButton = document.getElementById('openMenu');
+    const closeMenuButton = document.getElementById('closeMenu');
+    const menu = document.getElementById('menu');
+
+    openMenuButton.addEventListener('click', () => {
+        menu.style.top = '100';
+    });
+
+    closeMenuButton.addEventListener('click', () => {
+        menu.style.top = '-100%';
+    });
+</script>
+</body>
+</html>
